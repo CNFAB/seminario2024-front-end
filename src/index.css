@@ -1,0 +1,52 @@
+#root {
+  background: #292828;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+H2 {
+  color: aqua;
+}
+/* SweetAlert2 — estilo compacto profesional */
+.swal2-popup.swal-compact {
+  padding: 2rem 2.5rem !important;
+  border-radius: 12px !important;
+  width: 360px !important;
+  font-family: inherit !important;
+}
+
+.swal2-popup.swal-compact .swal2-icon {
+  width: 52px !important;
+  height: 52px !important;
+  margin: 0 auto 1.25rem !important;
+  border-width: 2px !important;
+}
+
+.swal2-popup.swal-compact .swal2-icon .swal2-icon-content {
+  font-size: 1.6rem !important;
+}
+
+.swal2-popup.swal-compact .swal-title-compact {
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+  padding: 0 !important;
+  color: #1a1a1a !important;
+}
+
+.swal2-popup.swal-compact .swal-text-compact {
+  font-size: 13px !important;
+  color: 6b7280 !important;
+  margin: 0 0 1.25rem !important;
+  padding: 0 !important;
+}
+
+.swal2-popup.swal-compact .swal-btn-compact {
+  font-size: 13px !important;
+  padding: 9px 28px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}

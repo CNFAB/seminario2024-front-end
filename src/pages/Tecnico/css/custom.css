@@ -1,0 +1,69 @@
+/* Estilos personalizados para mejorar la apariencia */
+
+/* Ajustes generales */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Estilos para las tarjetas de diagnóstico */
+.card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+  border-color: #0d6efd !important;
+}
+
+/* Scroll personalizado */
+.card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Mejoras para formularios */
+.form-control:focus, .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Animación para badges */
+.badge {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .d-flex.justify-content-between > div {
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}

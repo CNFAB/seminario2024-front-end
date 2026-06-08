@@ -1,0 +1,305 @@
+/* FormularioPieza.module.css */
+
+/* Contenedor del modal */
+.modalPiezaOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalPiezaContent {
+  background: white;
+  border-radius: 24px;
+  width: 480px;
+  max-width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* Header */
+.modalPiezaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.modalPiezaHeader h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modalPiezaHeader h3 i {
+  margin-right: 10px;
+  color: #6366f1;
+}
+
+.modalPiezaClose {
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+.modalPiezaClose:hover:not(:disabled) {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Body */
+.modalPiezaBody {
+  padding: 24px;
+}
+
+/* Grupos de formulario */
+.piezaFormGroup {
+  margin-bottom: 20px;
+}
+
+.piezaFormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.piezaFormRow .piezaFormGroup {
+  margin-bottom: 0;
+}
+
+.piezaFormGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.piezaFormGroup label i {
+  margin-right: 6px;
+  color: #6366f1;
+  font-size: 13px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+/* Inputs */
+.piezaInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.piezaInput:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.piezaInputError {
+  border-color: #ef4444;
+}
+
+.piezaInput::placeholder {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Input group (precio con símbolo $) */
+.piezaInputGroup {
+  display: flex;
+  width: 100%;
+}
+
+.piezaInputIcon {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding: 0 12px;
+  color: #475569;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.piezaInputGroup .piezaInput {
+  border-radius: 0 10px 10px 0;
+}
+
+/* Select */
+.piezaSelect {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: white;
+}
+
+.piezaSelect:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.piezaSelectError {
+  border-color: #ef4444;
+}
+
+/* Error message */
+.piezaErrorMessage {
+  display: block;
+  margin-top: 6px;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+/* Footer */
+.modalPiezaFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.piezaBtnCancel {
+  padding: 8px 20px;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 10px;
+  color: #475569;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.piezaBtnCancel:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+.piezaBtnSave {
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.piezaBtnSave:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.piezaBtnSave:disabled,
+.piezaBtnCancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.piezaSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modalPiezaContent {
+    width: 95%;
+  }
+
+  .piezaFormRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .modalPiezaBody {
+    padding: 20px;
+  }
+
+  .modalPiezaHeader {
+    padding: 16px 20px;
+  }
+
+  .modalPiezaFooter {
+    padding: 16px 20px 20px;
+  }
+
+  .piezaBtnCancel,
+  .piezaBtnSave {
+    padding: 8px 16px;
+  }
+}

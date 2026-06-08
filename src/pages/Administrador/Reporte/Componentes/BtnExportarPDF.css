@@ -1,0 +1,56 @@
+/* ── BtnExportarPDF.css ───────────────────────────────────────────────────── */
+
+.btn-exportar-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-exportar-pdf:hover:not(:disabled) {
+  background: #dc2626;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-exportar-pdf:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-exportar-pdf:disabled {
+  background: #fca5a5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-exportar-pdf.exportando {
+  background: #dc2626;
+  pointer-events: none;
+}
+
+.pdf-spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: pdf-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pdf-spin {
+  to { transform: rotate(360deg); }
+}

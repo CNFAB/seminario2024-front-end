@@ -1,0 +1,429 @@
+/* Marca.module.css */
+
+/* Contenedor principal */
+.marcasContainer {
+  padding: 24px 32px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.marcasHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.marcasTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.marcasSubtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Botones principales */
+.marcasBtnPrimary {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.marcasBtnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.marcasBtnSecondary {
+  background: #e2e8f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.marcasBtnSecondary:hover {
+  background: #cbd5e1;
+}
+
+/* Loading */
+.marcasLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Tabla */
+.marcasTableContainer {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.marcasTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.marcasTable thead tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.marcasTable th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.marcasTable td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.marcasTable tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Marca name con avatar */
+.marcaName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marcaAvatar {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Badge modelos */
+.modelosBadge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Acciones */
+.marcasActions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.actionEdit {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.actionEdit:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+.actionDelete {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.actionDelete:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Empty state */
+.marcasEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.marcasEmpty i {
+  font-size: 48px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.marcasEmpty p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ============================================ */
+/* MODAL COMPACTO - MISMO ESTILO QUE MODELOS */
+/* ============================================ */
+
+.marcasModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.marcasModalContent {
+  background: white;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+.marcasModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.marcasModalHeader h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.marcasModalHeader h3 i {
+  color: #6366f1;
+  margin-right: 8px;
+}
+
+.marcasModalClose {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+.marcasModalClose:hover {
+  background: #f1f5f9;
+  color: #ef4444;
+}
+
+.marcasModalBody {
+  padding: 20px;
+  background: white;
+}
+
+/* Formulario */
+.marcasFormGroup {
+  margin-bottom: 16px;
+}
+
+.marcasFormGroup label {
+  display: block;
+  margin-bottom: 6px;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.marcasRequired {
+  color: #ef4444;
+}
+
+.marcasFormGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.marcasFormGroup input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.marcasFormGroup input.error {
+  border-color: #ef4444;
+}
+
+.marcasErrorMessage {
+  display: block;
+  margin-top: 4px;
+  color: #ef4444;
+  font-size: 11px;
+}
+
+.marcasModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.marcasBtnCancel {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #64748b;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.marcasBtnCancel:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.marcasBtnSave {
+  padding: 8px 20px;
+  background: #6366f1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.marcasBtnSave:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.marcasBtnSave:disabled,
+.marcasBtnCancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marcasContainer {
+    padding: 16px;
+  }
+  
+  .marcasModalContent {
+    width: 95%;
+  }
+  
+  .marcasTable th,
+  .marcasTable td {
+    padding: 12px;
+  }
+}

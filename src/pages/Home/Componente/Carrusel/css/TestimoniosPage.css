@@ -1,0 +1,22 @@
+/* src/components/Home/Componentes/css/TestimoniosPage.css */
+
+/* Sección del carrusel - fondo oscuro */
+.testimonios-page-container {
+  background-color: #0b1e33;
+  min-height: 100vh;
+  padding-top: 80px; /* Por el navbar fijo */
+}
+
+.testimonios-page-container h1 {
+  color: white;
+}
+
+.testimonios-page-container p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sección de estadísticas - fondo claro */
+.estadisticas-wrapper {
+  background-color: #f8fafc;
+  padding: 3rem 2rem;
+}

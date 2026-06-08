@@ -1,0 +1,110 @@
+/* src/pages/Clients/ClienteAuth.css */
+.cliente-auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0b1e33 0%, #1d3a5c 100%);
+    padding: 20px;
+}
+
+.cliente-auth-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cliente-auth-card h2 {
+    color: #0b1e33;
+    font-weight: 700;
+}
+
+.cliente-auth-card .text-muted {
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.input-icon-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    z-index: 1;
+}
+
+.input-icon-wrapper .form-control {
+    padding-left: 40px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.input-icon-wrapper .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.btn-primary {
+    background: #0d6efd;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #0b5ed7;
+}
+
+.btn-link {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #0d6efd;
+}
+
+.alert {
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #d1fae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.text-green {
+    color: #10b981;
+}
+
+@media (max-width: 480px) {
+    .cliente-auth-card {
+        padding: 30px 20px;
+    }
+}

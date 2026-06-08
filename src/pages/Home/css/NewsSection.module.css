@@ -1,0 +1,735 @@
+/* src/pages/News/News.module.css */
+
+.newsPage {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.newsHeroWrapper {
+  position: relative;
+  min-height: 50vh;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  margin-bottom: 2rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.newsHeroContent {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+}
+
+/* Filtros */
+.newsFilters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.newsFilterBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsFilterBtn:hover {
+  background: rgba(255, 107, 53, 0.15);
+  border-color: rgba(255, 107, 53, 0.3);
+  color: #ff6b35;
+}
+
+.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: white;
+}
+
+/* Títulos de sección */
+.newsSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(255, 107, 53, 0.3);
+}
+
+/* Cards destacadas */
+.newsCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+}
+
+.featured {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 107, 53, 0.02));
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+.newsCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.newsCardBadge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #ff6b35;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.newsIconLarge {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #ff6b35;
+}
+
+.newsIconLarge svg {
+  width: 28px;
+  height: 28px;
+}
+
+.newsCardTitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.newsCardDescription {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.newsCardMeta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.newsCardMeta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsBtn {
+  width: 100%;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff6b35;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsBtn:hover {
+  background: #ff6b35;
+  color: white;
+}
+
+/* Cards horizontales */
+.newsCardHorizontal {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.newsCardHorizontal:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.newsCardIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6b35;
+  flex-shrink: 0;
+}
+
+.newsCardContent {
+  flex: 1;
+}
+
+.newsCardTag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.newsCardTitleH {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.newsCardDescriptionH {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.newsCardMetaH {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.newsCardMetaH span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.newsBtnSmall {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff6b35;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.newsBtnSmall:hover {
+  gap: 10px;
+}
+
+/* Redes Sociales */
+.socialSection {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, rgba(10, 10, 20, 0.95) 0%, rgba(20, 20, 35, 0.95) 100%);
+  border-radius: 24px;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.socialSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+}
+
+.socialHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.socialHeader h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.socialHeaderDecoration {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.socialSubtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.socialCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+
+.socialCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.socialCard:hover {
+  background: rgba(255, 107, 53, 0.05);
+  border-color: #ff6b35;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.socialCard:hover::before {
+  transform: scaleX(1);
+}
+
+.socialIconWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.socialIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 165, 0, 0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .socialIcon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.4), rgba(255, 165, 0, 0.4));
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+}
+
+.socialIcon svg {
+  color: #ff6b35;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .socialIcon svg {
+  color: #ffa500;
+  transform: scale(1.05);
+}
+
+.socialCard h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.socialCard p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.socialHoverEffect {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 107, 53, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.socialCard:hover .socialHoverEffect {
+  opacity: 1;
+}
+
+/* Colores específicos para cada red social en hover */
+.socialCardFacebook:hover {
+  box-shadow: 0 10px 30px rgba(24, 119, 242, 0.2);
+}
+
+.socialCardTwitter:hover {
+  box-shadow: 0 10px 30px rgba(29, 161, 242, 0.2);
+}
+
+.socialCardInstagram:hover {
+  box-shadow: 0 10px 30px rgba(193, 53, 132, 0.2);
+}
+
+/* CTA Contacto */
+.newsContactCta {
+  text-align: center;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.newsContactCta h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.newsContactCta p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.newsContactButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contactBtnWhatsapp {
+  background: #25d366 !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 12px 32px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: white !important;
+}
+
+.contactBtnWhatsapp:hover {
+  background: #128c7e !important;
+  transform: translateY(-2px);
+}
+
+.contactBtnEmail {
+  background: transparent !important;
+  border: 2px solid #ff6b35 !important;
+  border-radius: 50px !important;
+  padding: 12px 32px !important;
+  font-weight: 600 !important;
+  color: #ff6b35 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.contactBtnEmail:hover {
+  background: rgba(255, 107, 53, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.modalContainer {
+  background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeaderCustom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalHeaderCustom h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin: 0;
+}
+
+.modalClose {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modalClose:hover {
+  color: #ff6b35;
+}
+
+.modalBodyCustom {
+  padding: 24px;
+}
+
+.modalInput,
+.modalTextarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  outline: none;
+}
+
+.modalInput:focus,
+.modalTextarea:focus {
+  border-color: #ff6b35;
+}
+
+.modalTextarea {
+  resize: vertical;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modalButtons button:first-child {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.modalButtons button:last-child {
+  flex: 1;
+  padding: 10px;
+  background: #ff6b35;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modalButtons button:last-child:hover {
+  background: #ff5722;
+}
+
+.modalError {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 16px;
+  color: #ef4444;
+  font-size: 13px;
+  text-align: center;
+}
+
+.modalSuccess {
+  text-align: center;
+  padding: 24px;
+}
+
+.modalSuccess h5 {
+  color: white;
+  margin: 16px 0 8px;
+}
+
+.modalSuccess p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsHeroContent {
+    padding: 60px 0;
+  }
+
+  .newsCardHorizontal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsCardIcon {
+    margin: 0 auto;
+  }
+
+  .newsCardMetaH {
+    justify-content: center;
+  }
+
+  .newsBtnSmall {
+    margin: 0 auto;
+  }
+
+  .socialSection {
+    padding: 2rem 1rem;
+  }
+
+  .socialHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .socialGrid {
+    gap: 1rem;
+  }
+
+  .socialCard {
+    padding: 1.5rem;
+  }
+
+  .socialIcon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .socialIcon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .socialCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .newsContactCta {
+    padding: 32px 20px;
+  }
+
+  .newsContactButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactBtnWhatsapp,
+  .contactBtnEmail {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsFilters {
+    gap: 8px;
+  }
+
+  .newsFilterBtn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .newsCardTitle {
+    font-size: 1.1rem;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+}

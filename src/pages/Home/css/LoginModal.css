@@ -1,0 +1,417 @@
+/* ===== VARIABLES RGBA - MISMA PALETA ===== */
+:root {
+  /* Azul principal con diferentes opacidades */
+  --primary-blue: rgba(41, 98, 255, 1);
+  --primary-blue-soft: rgba(41, 98, 255, 0.1);
+  --primary-blue-medium: rgba(41, 98, 255, 0.3);
+  --primary-blue-light: rgba(41, 98, 255, 0.05);
+  
+  /* Verde éxito */
+  --success-green: rgba(40, 167, 69, 1);
+  --success-green-soft: rgba(40, 167, 69, 0.1);
+  
+  /* Naranja warning/admin */
+  --admin-orange: rgba(255, 107, 0, 1);
+  --admin-orange-soft: rgba(255, 107, 0, 0.1);
+  
+  /* Púrpura recepción */
+  --reception-purple: rgba(111, 66, 193, 1);
+  --reception-purple-soft: rgba(111, 66, 193, 0.1);
+  
+  /* Azul técnico */
+  --tech-blue: rgba(23, 162, 184, 1);
+  --tech-blue-soft: rgba(23, 162, 184, 0.1);
+  
+  /* Grises */
+  --gray-50: rgba(248, 249, 250, 1);
+  --gray-100: rgba(241, 243, 245, 1);
+  --gray-200: rgba(233, 236, 239, 1);
+  --gray-600: rgba(108, 117, 125, 1);
+  --gray-800: rgba(52, 58, 64, 1);
+  
+  /* Sombras */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 40px rgba(41, 98, 255, 0.2);
+}
+
+/* ===== MODAL PRINCIPAL ===== */
+.login-modal .modal-content {
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: white;
+}
+
+.modal-content-wrapper {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 249, 250, 1) 100%
+  );
+}
+
+/* ===== HEADER ===== */
+.modal-header-custom {
+  padding: 1rem 1rem 0;
+  border-bottom: none;
+}
+
+.close-button {
+  color: var(--gray-600);
+  padding: 8px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  background: var(--primary-blue-soft);
+  color: var(--primary-blue);
+  transform: rotate(90deg);
+}
+
+/* ===== LOGO ===== */
+.logo-text {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--gray-800) 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--tech-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== BADGES DE ROLES ===== */
+/* En LoginModal.css - Agrega esto */
+.cliente-badge {
+  color: var(--cliente-green, #28a745);
+  background: rgba(40, 167, 69, 0.1);
+  border: 1px solid var(--cliente-green, #28a745);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.cliente-badge:hover {
+  background: var(--cliente-green, #28a745);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.register-link {
+  color: var(--primary-blue, #2962ff);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+.roles-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid transparent;
+}
+
+.admin-badge {
+  color: var(--admin-orange);
+  background: var(--admin-orange-soft);
+  border-color: var(--admin-orange);
+}
+
+.admin-badge:hover {
+  background: var(--admin-orange);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+.recepcion-badge {
+  color: var(--reception-purple);
+  background: var(--reception-purple-soft);
+  border-color: var(--reception-purple);
+}
+
+.recepcion-badge:hover {
+  background: var(--reception-purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
+}
+
+.tecnico-badge {
+  color: var(--tech-blue);
+  background: var(--tech-blue-soft);
+  border-color: var(--tech-blue);
+}
+
+.tecnico-badge:hover {
+  background: var(--tech-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(23, 162, 184, 0.3);
+}
+
+.role-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== INPUTS ===== */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--gray-600);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.custom-input {
+  padding-left: 48px !important;
+  height: 54px;
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  background: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px var(--primary-blue-soft);
+  outline: none;
+}
+
+.custom-input:focus + .input-icon,
+.input-wrapper:focus-within .input-icon {
+  color: var(--primary-blue);
+  transform: scale(1.1);
+}
+
+/* ===== BOTÓN SUBMIT ===== */
+.submit-button {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--tech-blue) 100%);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.submit-button:disabled {
+  background: var(--gray-200);
+  opacity: 0.7;
+}
+
+/* ===== ERROR ALERT ===== */
+.error-alert {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: rgb(220, 53, 69);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* ===== FORGOT PASSWORD ===== */
+.forgot-password {
+  color: var(--gray-600);
+}
+
+.forgot-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.forgot-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--tech-blue));
+  transition: width 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: var(--primary-blue);
+}
+
+.forgot-link:hover::after {
+  width: 100%;
+}
+
+/* ===== SOPORTE SECTION ===== */
+.support-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: var(--gray-50);
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  margin-top: 20px;
+}
+
+.support-icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-blue-soft), var(--tech-blue-soft));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-blue-light);
+}
+
+.support-icon {
+  color: var(--primary-blue);
+}
+
+.support-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.support-phone {
+  color: var(--gray-800);
+  font-weight: 600;
+  margin: 2px 0 0 0;
+  font-size: 1rem;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+  .login-modal .modal-body {
+    padding: 1.5rem !important;
+  }
+  
+  .logo-text {
+    font-size: 1.8rem;
+  }
+  
+  .roles-container {
+    gap: 8px;
+  }
+  
+  .role-badge {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+  
+  .support-section {
+    padding: 12px;
+  }
+}
+
+/* ===== ESTADOS FOCUS Y HOVER ===== */
+.custom-input:-webkit-autofill,
+.custom-input:-webkit-autofill:hover,
+.custom-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: var(--gray-800) !important;
+  border-color: var(--primary-blue);
+}
+
+/* Loading spinner personalizado */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+  border-color: white transparent transparent transparent;
+}

@@ -1,0 +1,567 @@
+/* src/style/theme.css */
+
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #0b1e33 0%, #1d3a5c 100%);
+  --primary-dark: #0b1e33;
+  --primary-medium: #1d3a5c;
+  --primary-light: #2c4c7e;
+  --accent-blue: #0d6efd;
+  --accent-blue-hover: #0b5ed7;
+  --text-white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --text-muted-50: rgba(0, 0, 0, 0.5);
+  --bg-blur: rgba(255, 255, 255, 0.1);
+  --bg-blur-hover: rgba(255, 255, 255, 0.15);
+  --border-blur: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-blue: 0 10px 20px rgba(13, 110, 253, 0.3);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
+  --border-radius-pill: 50px;
+}
+
+/* ===== ESTILOS BASE ===== */
+.tech-bg-gradient {
+  background: var(--primary-gradient) !important;
+}
+
+.tech-bg-dark {
+  background: var(--primary-dark) !important;
+}
+
+.tech-bg-medium {
+  background: var(--primary-medium) !important;
+}
+
+.tech-text-white {
+  color: var(--text-white) !important;
+}
+
+.tech-text-muted {
+  color: var(--text-muted) !important;
+}
+
+.tech-text-muted-50 {
+  color: var(--text-muted-50) !important;
+}
+
+/* ===== EFECTOS DE BLUR ===== */
+.tech-backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tech-bg-blur {
+  background: var(--bg-blur) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-blur);
+}
+
+.tech-bg-blur:hover {
+  background: var(--bg-blur-hover) !important;
+}
+
+/* ===== TARJETAS ===== */
+.tech-card {
+  background: var(--primary-gradient) !important;
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-lg) !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+.tech-card-light {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: all 0.3s ease;
+}
+
+.tech-card-light:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* ===== TARJETAS DE ESTADÍSTICAS ===== */
+.tech-stats-card {
+  background: var(--bg-blur) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-md) !important;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.tech-stats-card:hover {
+  background: var(--bg-blur-hover) !important;
+  transform: translateY(-3px);
+}
+
+.tech-stats-icon {
+  background: rgba(13, 110, 253, 0.2);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  margin-right: 1rem;
+}
+
+.tech-stats-icon svg {
+  color: var(--accent-blue);
+}
+
+/* ===== BADGES / ETIQUETAS ===== */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.tech-badge-primary {
+  background: rgba(13, 110, 253, 0.2);
+  border: 1px solid rgba(13, 110, 253, 0.3);
+}
+
+.tech-badge-default {
+  background: var(--bg-blur);
+  border: var(--border-blur);
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  background: rgba(13, 110, 253, 0.3) !important;
+}
+
+.tech-badge-icon {
+  color: var(--accent-blue);
+}
+
+.tech-badge span {
+  color: var(--text-white);
+  font-size: 0.85rem;
+}
+
+/* ===== BOTONES ===== */
+.tech-btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--accent-blue) 0%,
+    var(--accent-blue-hover) 100%
+  ) !important;
+  border: none !important;
+  border-radius: var(--border-radius-pill) !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: var(--shadow-blue) !important;
+  transition: all 0.3s ease !important;
+  color: white !important;
+}
+
+.tech-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.4) !important;
+}
+
+.tech-btn-outline {
+  background: transparent !important;
+  border: 2px solid var(--text-white) !important;
+  border-radius: var(--border-radius-pill) !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  color: var(--text-white) !important;
+  transition: all 0.3s ease !important;
+}
+.tech-btn-outline1 {
+  background: transparent !important;
+  border: 2px solid var(--text-white) !important;
+  border-radius: var(--border-radius-pill) !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  color: var(--text-muted-50) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tech-btn-outline1:hover {
+  background: var(--accent-blue) !important;
+  color: var(--text-white) !important;
+  border-color: var(--accent-blue) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ===== INPUTS ===== */
+.tech-input {
+  background: var(--bg-blur) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-md) !important;
+  height: 55px;
+  color: var(--text-white) !important;
+  padding-left: 3rem !important;
+}
+
+.tech-input:focus {
+  background: var(--bg-blur-hover) !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+  border-color: var(--accent-blue) !important;
+}
+
+.tech-input::placeholder {
+  color: var(--text-muted-50) !important;
+}
+
+.tech-input-wrapper {
+  position: relative;
+}
+
+.tech-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--accent-blue);
+  z-index: 10;
+}
+/*/-----------blach---------------------*/
+/* ===== TECH INPUT LIGHT ===== */
+.tech-input-light {
+  background: #1a1a1a !important; /* Negro suave en lugar de negro puro */
+  border: 1px solid #333 !important;
+  border-radius: var(--border-radius-md) !important;
+  height: 55px;
+  color: white !important; /* ← Cambiado a blanco para verse en fondo oscuro */
+  padding-left: 3rem !important;
+  transition: all 0.3s ease;
+}
+
+.tech-input-light:focus {
+  background: #2d2d2d !important;
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15) !important;
+  color: white !important;
+}
+
+.tech-input-light::placeholder {
+  color: #888 !important; /* Placeholder gris claro */
+}
+
+.tech-input-light-wrapper {
+  position: relative;
+}
+
+.tech-input-light-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #888; /* Icono gris */
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.tech-input-light-wrapper:focus-within .tech-input-light-icon {
+  color: var(--accent-blue);
+}
+.tech-input-light-wrapper:focus-within .tech-input-light-icon {
+  color: var(--accent-blue);
+}
+
+/* ===== HEADER ===== */
+.tech-header {
+  background: transparent !important;
+  position: relative;
+  z-index: 3;
+}
+
+.tech-header .navbar-brand {
+  color: var(--text-white) !important;
+}
+
+.tech-header .nav-link {
+  color: var(--text-white) !important;
+  position: relative;
+  padding: 0.5rem 0 !important;
+  transition: color 0.3s ease;
+}
+
+.tech-header .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-blue);
+  transition: width 0.3s ease;
+}
+
+.tech-header .nav-link:hover::after {
+  width: 80%;
+}
+
+.tech-header .nav-link:hover {
+  color: var(--accent-blue) !important;
+}
+
+/* ===== TABS ===== */
+.tech-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tech-tabs .nav-link {
+  color: var(--text-muted) !important;
+  border: none !important;
+  padding: 1rem 1.5rem !important;
+  transition: all 0.3s ease;
+}
+
+.tech-tabs .nav-link:hover {
+  color: var(--text-white) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.tech-tabs .nav-link.active {
+  color: var(--accent-blue) !important;
+  background: transparent !important;
+  border-bottom: 3px solid var(--accent-blue) !important;
+}
+/*-----------blach---------------------
+/* ===== TABS MODO CLARO ===== */
+.tech-tabs-light {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.tech-tabs-light .nav-link {
+  color: #64748b !important; /* Texto gris */
+  border: none !important;
+  padding: 1rem 1.5rem !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.tech-tabs-light .nav-link:hover {
+  color: #0d6efd !important; /* Azul al hacer hover */
+  background: #f8fafc !important;
+}
+
+.tech-tabs-light .nav-link.active {
+  color: #0d6efd !important; /* Azul cuando está activo */
+  background: transparent !important;
+  border-bottom: 3px solid #0d6efd !important;
+  font-weight: 600;
+}
+
+/* Opcional: con íconos */
+.tech-tabs-light .nav-link svg {
+  margin-right: 8px;
+  margin-bottom: 2px;
+}
+
+/* Opcional: para tabs con bordes redondeados */
+.tech-tabs-light-pill .nav-link {
+  border-radius: 30px !important;
+  margin: 0 5px;
+  padding: 0.7rem 1.8rem !important;
+}
+
+.tech-tabs-light-pill .nav-link.active {
+  background: #0d6efd !important;
+  color: white !important;
+  border-bottom: none !important;
+}
+
+/* ===== TIMELINE ===== */
+.tech-timeline {
+  position: relative;
+  padding: 1rem;
+}
+
+.tech-timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  border-left: 2px solid rgba(13, 110, 253, 0.3);
+}
+
+.tech-timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.tech-timeline-dot {
+  position: absolute;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  border: 3px solid var(--primary-dark);
+}
+
+/* ===== MODAL ===== */
+.tech-modal .modal-content {
+  background: var(--primary-gradient) !important;
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.tech-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tech-modal .modal-title {
+  color: var(--text-white) !important;
+}
+
+.tech-modal .modal-body {
+  color: var(--text-muted) !important;
+}
+
+.tech-modal .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===== ALERTS ===== */
+.tech-alert {
+  background: var(--bg-blur) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-blur) !important;
+  border-radius: var(--border-radius-md) !important;
+  color: var(--text-white) !important;
+}
+
+.tech-alert-danger {
+  background: rgba(220, 53, 69, 0.2) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+}
+
+.tech-alert-success {
+  background: rgba(25, 135, 84, 0.2) !important;
+  border: 1px solid rgba(25, 135, 84, 0.3) !important;
+}
+
+/* ===== FOOTER ===== */
+.tech-footer {
+  background: var(--primary-dark) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 2rem 0;
+}
+
+/* ===== UTILITIES ===== */
+.tech-border-left {
+  border-left: 4px solid var(--accent-blue);
+  transition: all 0.3s ease;
+}
+
+.tech-border-left:hover {
+  transform: translateX(5px);
+}
+
+.tech-shadow {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.tech-shadow-sm {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.tech-glow {
+  box-shadow: var(--shadow-blue) !important;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.tech-hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.tech-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.tech-hover-lift {
+  transition: all 0.3s ease;
+}
+
+.tech-hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tech-display-3 {
+    font-size: 2.5rem;
+  }
+
+  .tech-phone-space h3 {
+    font-size: 1.5rem;
+  }
+}
+/* ===== TABS - CORRECCIÓN PARA FONDO CLARO ===== */
+
+/* Forzar color oscuro en tabs cuando están en cards claras */
+.tech-card-light .tech-tabs .nav-link,
+.tech-tabs-light .nav-link {
+  color: #495057 !important; /* Gris oscuro visible */
+  font-weight: 500 !important;
+}
+
+.tech-card-light .tech-tabs .nav-link:hover,
+.tech-tabs-light .nav-link:hover {
+  color: #0d6efd !important; /* Azul al hover */
+  background: rgba(13, 110, 253, 0.05) !important;
+}
+
+.tech-card-light .tech-tabs .nav-link.active,
+.tech-tabs-light .nav-link.active {
+  color: #0d6efd !important; /* Azul cuando activo */
+  font-weight: 600 !important;
+}
+
+/* Iconos dentro de los tabs */
+.tech-card-light .tech-tabs .nav-link svg,
+.tech-tabs-light .nav-link svg {
+  color: inherit !important;
+}
+
+/* Borde inferior del tab activo */
+.tech-card-light .tech-tabs .nav-link.active,
+.tech-tabs-light .nav-link.active {
+  border-bottom: 3px solid #0d6efd !important;
+}
+
+/* Contenido del tab pane - asegurar que sea visible */
+.tech-card-light .tab-pane,
+.tech-tabs-light-content {
+  background: #ffffff !important;
+  color: #212529 !important; /* Texto negro */
+  min-height: 200px;
+}
+
+.tech-card-light .tab-pane *,
+.tech-tabs-light-content * {
+  color: inherit !important;
+}

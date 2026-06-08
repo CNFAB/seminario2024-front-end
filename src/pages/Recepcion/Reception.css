@@ -1,0 +1,1217 @@
+/* ── Reception.css ────────────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
+}
+
+.rec-shell {
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Loading ── */
+.rec-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 12px;
+  color: #6366f1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Navbar ── */
+.rec-navbar {
+  background: #0f172a;
+  padding: 0 28px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.rec-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rec-brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #fff;
+}
+.rec-brand-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.rec-brand-sub {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.rec-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rec-user-info {
+  text-align: right;
+  margin-right: 4px;
+}
+.rec-user-nombre {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+.rec-user-correo {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* ── Botones navbar ── */
+.rec-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.rec-btn-outline:hover {
+  border-color: #64748b;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.rec-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid #f43f5e;
+  background: transparent;
+  color: #f43f5e;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.rec-btn-danger:hover {
+  background: #f43f5e;
+  color: #fff;
+}
+
+/* ── Body ── */
+.rec-body {
+  padding: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Pantalla búsqueda ── */
+.rec-buscar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+.rec-buscar-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.rec-buscar-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #6366f1;
+  margin-bottom: 16px;
+}
+.rec-buscar-titulo {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+.rec-buscar-sub {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+.rec-buscar-input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.rec-buscar-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  font-size: 13px;
+  color: #334155;
+  outline: none;
+  transition: border 0.15s;
+}
+.rec-buscar-input:focus {
+  border-color: #6366f1;
+}
+.rec-buscar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.rec-buscar-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+.rec-buscar-btn:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+.rec-buscar-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin: 4px 0 0;
+  align-self: flex-start;
+}
+
+/* ── Resultado encontrado ── */
+.rec-resultado-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  text-align: left;
+}
+.rec-resultado-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.rec-resultado-info {
+  flex: 1;
+  min-width: 0;
+}
+.rec-resultado-nombre {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.rec-resultado-detalle {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+.rec-resultado-disps {
+  font-size: 11px;
+  color: #6366f1;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* ── No encontrado ── */
+.rec-no-encontrado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  width: 100%;
+}
+.rec-no-encontrado i {
+  font-size: 16px;
+}
+
+/* ── Divisor ── */
+.rec-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+.rec-divider::before,
+.rec-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* ── Botones acción ── */
+.rec-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rec-btn-primary:hover {
+  background: #4f46e5;
+}
+
+.rec-btn-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #10b981;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.rec-btn-success:hover {
+  background: #059669;
+}
+
+.rec-btn-nuevo {
+  width: 100%;
+  justify-content: center;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rec-btn-nuevo:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+  background: #eff6ff;
+}
+
+.rec-btn-link {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  transition: color 0.15s;
+}
+.rec-btn-link:hover {
+  color: #6366f1;
+}
+
+/* ── Dispositivos lista ── */
+.rec-disp-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.rec-disp-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+}
+.rec-disp-item:hover {
+  border-color: #6366f1;
+  background: #eff6ff;
+}
+.rec-disp-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.rec-disp-info {
+  flex: 1;
+}
+.rec-disp-modelo {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.rec-disp-imei {
+  font-size: 11px;
+  color: #94a3b8;
+  font-family: monospace;
+  margin-top: 2px;
+}
+.rec-disp-arrow {
+  color: #94a3b8;
+  font-size: 12px;
+}
+.rec-disp-item:hover .rec-disp-arrow {
+  color: #6366f1;
+}
+
+/* ── Cliente pill ── */
+.rec-cliente-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* ── Barra de progreso ── */
+.rec-progress-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.rec-progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 16px;
+  position: relative;
+}
+.rec-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  flex: 1;
+}
+.rec-step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s;
+  z-index: 1;
+}
+.rec-step-circle.completado {
+  background: #10b981;
+  color: #fff;
+}
+.rec-step-circle.activo {
+  background: #6366f1;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+.rec-step-circle.pendiente {
+  background: #f1f5f9;
+  color: #94a3b8;
+  border: 2px solid #e2e8f0;
+}
+.rec-step-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.rec-step-label.activo {
+  color: #6366f1;
+}
+.rec-step-line {
+  position: absolute;
+  top: 18px;
+  left: calc(50% + 20px);
+  right: calc(-50% + 20px);
+  height: 2px;
+  background: #e2e8f0;
+}
+.rec-step-line.completado {
+  background: #10b981;
+}
+
+.rec-progress-bar-wrap {
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.rec-progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  transition: width 0.4s ease;
+}
+.rec-progress-texto {
+  font-size: 11px;
+  color: #94a3b8;
+  text-align: right;
+  margin-top: 6px;
+}
+
+/* ── Form card ── */
+.rec-form-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* ── Nav botones ── */
+.rec-nav-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid #f1f5f9;
+}
+.rec-nav-info {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .rec-body {
+    padding: 16px;
+  }
+  .rec-buscar-card {
+    padding: 24px 20px;
+  }
+  .rec-navbar {
+    padding: 0 16px;
+  }
+  .rec-user-info {
+    display: none;
+  }
+}
+/* ────────────────────────────────────────────────────────────────────────── */
+/*  RECLAMOS DE GARANTÍA - ESTILOS ADICIONALES                               */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* Contenedor y tarjeta principal de reclamos */
+.rec-reclamos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.rec-reclamos-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+/* Ícono decorativo */
+.rec-reclamos-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.rec-reclamos-icon i {
+  font-size: 32px;
+  color: white;
+}
+
+/* Títulos */
+.rec-reclamos-titulo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.rec-reclamos-subtitulo {
+  font-size: 13px;
+  color: #64748b;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+/* Grupo de input para email */
+.rec-reclamos-input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rec-reclamos-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: #fff;
+  color: #334155;
+  outline: none;
+}
+
+.rec-reclamos-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.rec-reclamos-input:disabled {
+  background-color: #f8fafc;
+  color: #94a3b8;
+}
+
+.rec-reclamos-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.rec-reclamos-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.rec-reclamos-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mensajes de alerta */
+.rec-reclamos-error {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  border-left: 4px solid #dc2626;
+}
+
+.rec-reclamos-exito {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  border-left: 4px solid #16a34a;
+}
+
+/* Tarjeta de cliente encontrado */
+.rec-reclamos-cliente-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border: 1px solid #e2e8f0;
+}
+
+.rec-reclamos-cliente-avatar {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.rec-reclamos-cliente-info {
+  flex: 1;
+}
+
+.rec-reclamos-cliente-nombre {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.rec-reclamos-cliente-detalle {
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rec-reclamos-cliente-detalle i {
+  margin-right: 4px;
+  width: 14px;
+}
+
+/* Lista de reclamos */
+.rec-reclamos-lista {
+  margin-top: 28px;
+}
+
+.rec-reclamos-lista-titulo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rec-reclamos-lista-titulo span {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Item de reclamo */
+.rec-reclamo-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.rec-reclamo-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.rec-reclamo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rec-reclamo-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rec-badge-reclamo {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.rec-badge-estado {
+  background-color: #dcfce7;
+  color: #166534;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.rec-reclamo-dispositivo {
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.rec-reclamo-dispositivo i {
+  margin-right: 6px;
+  color: #8b5cf6;
+}
+
+.rec-reclamo-fecha {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rec-reclamo-descripcion {
+  font-size: 12px;
+  color: #475569;
+  background-color: #f8fafc;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-top: 8px;
+  border-left: 3px solid #8b5cf6;
+}
+
+.rec-reclamo-diagnostico {
+  font-size: 12px;
+  color: #475569;
+  background-color: #fef3c7;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-top: 8px;
+  border-left: 3px solid #f59e0b;
+}
+
+/* Botón verde para registrar ingreso */
+.rec-reclamo-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.rec-reclamo-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.rec-reclamo-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner dentro de botones */
+.rec-reclamo-btn .spinner-border,
+.rec-reclamos-btn .spinner-border {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+}
+
+/* Responsive para reclamos */
+@media (max-width: 640px) {
+  .rec-reclamos-card {
+    padding: 20px;
+  }
+
+  .rec-reclamos-input-group {
+    flex-direction: column;
+  }
+
+  .rec-reclamos-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rec-reclamo-header {
+    flex-direction: column;
+  }
+
+  .rec-reclamo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rec-reclamos-cliente-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rec-reclamos-cliente-detalle {
+    justify-content: center;
+  }
+
+  .rec-reclamos-titulo {
+    font-size: 18px;
+  }
+}
+
+/* Animación de carga */
+@keyframes rec-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.rec-loading-spinner {
+  animation: rec-pulse 1.5s ease-in-out infinite;
+}
+/* ── Modo selector: 3 tarjetas horizontales ────────────────────────────────── */
+.rec-modo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive: en pantallas medianas, 2 columnas */
+@media (max-width: 850px) {
+  .rec-modo-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+/* Responsive: en pantallas chicas, 1 columna */
+@media (max-width: 550px) {
+  .rec-modo-cards {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+/* Ajustes visuales de las tarjetas */
+.rec-modo-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rec-modo-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rec-modo-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 28px;
+  transition: all 0.2s;
+}
+
+.rec-modo-icon.ingreso {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.25);
+}
+
+.rec-modo-icon.retiro {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25);
+}
+
+.rec-modo-icon.reclamos {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  box-shadow: 0 6px 12px rgba(139, 92, 246, 0.25);
+}
+
+.rec-modo-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.5rem;
+  color: #0f172a;
+}
+
+.rec-modo-card p {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.rec-modo-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s;
+}
+
+.rec-modo-card:hover .rec-modo-btn {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+/* ── Contenedor principal del selector de modos ─────────────────────────────── */
+.rec-modo-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem 1rem;
+}
+
+.rec-modo-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+/* ── Grid de tarjetas: 3 horizontales y centradas ─────────────────────────── */
+.rec-modo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Responsive: pantallas medianas (2 columnas) */
+@media (max-width: 850px) {
+  .rec-modo-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
+  }
+}
+
+/* Responsive: pantallas chicas (1 columna) */
+@media (max-width: 550px) {
+  .rec-modo-cards {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .rec-modo-selector {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+}
+
+/* ── Estilos de cada tarjeta ── */
+.rec-modo-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 280px;
+}
+
+.rec-modo-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Íconos de las tarjetas */
+.rec-modo-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 30px;
+  transition: all 0.2s;
+}
+
+.rec-modo-icon.ingreso {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.25);
+}
+
+.rec-modo-icon.retiro {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25);
+}
+
+.rec-modo-icon.reclamos {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  box-shadow: 0 6px 12px rgba(139, 92, 246, 0.25);
+}
+
+/* Textos de las tarjetas */
+.rec-modo-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.5rem;
+  color: #0f172a;
+}
+
+.rec-modo-card p {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+  flex: 1;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón dentro de la tarjeta */
+.rec-modo-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+
+.rec-modo-card:hover .rec-modo-btn {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}

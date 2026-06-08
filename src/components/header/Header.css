@@ -1,0 +1,104 @@
+/* components/Header.css */
+
+.rt-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Logo ── */
+.rt-logo {
+  font-family: 'Georgia', serif;
+ font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  line-height: 1;
+  user-select: none;
+  cursor: pointer;
+}
+
+.rt-logo span:first-child {
+  color: #1a1a1a;
+}
+
+.rt-logo span:last-child {
+  color: #ff6b2b;
+}
+
+/* ── Info usuario ── */
+.rt-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.25;
+}
+
+.rt-user-name {
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.rt-user-role {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+/* ── Avatar ── */
+.rt-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 107, 43, 0.1);
+  border: 1.5px solid rgba(255, 107, 43, 0.4);
+  color: #ff6b2b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.rt-avatar:hover {
+  background: rgba(255, 107, 43, 0.22);
+  transform: translateY(-1px);
+}
+
+/* ── Botón cerrar sesión ── */
+.rt-btn-logout {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+  font-size: 0.78rem;
+  padding: 5px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.rt-btn-logout:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.05);
+}
+
+/* ── Divider ── */
+.rt-divider {
+  width: 1px;
+  height: 28px;
+  background: #dee2e6;
+  margin: 0 0.25rem;
+}

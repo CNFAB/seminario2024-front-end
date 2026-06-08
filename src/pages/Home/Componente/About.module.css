@@ -1,0 +1,447 @@
+/* pages/About/About.module.css - ESTILOS COMPLETOS DE ABOUT */
+
+/* ===== ESTILOS GENERALES ===== */
+.aboutPage {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+/* ===== HERO SECTION ===== */
+.aboutHeroWrapper {
+  position: relative;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  overflow: hidden;
+}
+
+.naranja {
+  color: #ff6b35;
+}
+
+.aboutHeroWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.aboutHeroContent {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+/* ===== MISSION & VISION CARDS ===== */
+.missionCard,
+.visionCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.missionCard:hover,
+.visionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.missionIcon,
+.visionIcon {
+  display: inline-flex;
+  padding: 15px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%);
+  border-radius: 50%;
+}
+
+/* ===== VALUES SECTION ===== */
+.valuesSection {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.valueIcon {
+  display: inline-flex;
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 12px;
+}
+
+/* ===== STATS CARDS ===== */
+.statsCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.statsCard:hover {
+  transform: scale(1.05);
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* ===== TEAM SECTION ===== */
+.teamSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 100%);
+}
+
+.teamCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.teamAvatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarCircle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ===== CONTACT CTA ===== */
+.contactCta {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.contactCta p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== MODAL ===== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalContainer {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  border-radius: 24px;
+  width: 520px;
+  max-width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  animation: slideUp 0.3s ease;
+}
+
+.modalContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalContainer::-webkit-scrollbar-track {
+  background: #1e1e2f;
+  border-radius: 10px;
+}
+
+.modalContainer::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 10px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.modalClose {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.modalClose:hover {
+  background: rgba(99, 102, 241, 0.2);
+  color: #ffffff;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalDescription {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  color: #cbd5e1;
+}
+
+.modalInput,
+.modalTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.modalInput:focus,
+.modalTextarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.modalInput::placeholder,
+.modalTextarea::placeholder {
+  color: #64748b;
+}
+
+.modalTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.modalBtnCancel {
+  padding: 0.625rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 40px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.modalBtnCancel:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.modalBtnSend {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.625rem 1.5rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.modalBtnSend:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.modalBtnSend:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modalSuccess {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.modalSuccess h5 {
+  color: #10b981;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modalSuccess p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.modalError {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  color: #f87171;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .aboutHeroContent h1 {
+    font-size: 2rem;
+  }
+  
+  .aboutHeroContent .lead {
+    font-size: 1rem;
+  }
+  
+  .missionCard,
+  .visionCard,
+  .valueCard,
+  .statsCard,
+  .teamCard {
+    margin-bottom: 1rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .contactCta {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsCard h2 {
+    font-size: 1.8rem;
+  }
+  
+  .teamCard {
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+  
+  .modalContainer {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .modalHeader {
+    padding: 1rem;
+  }
+  
+  .modalBody {
+    padding: 1rem;
+  }
+  
+  .modalButtons {
+    flex-direction: column-reverse;
+  }
+  
+  .modalBtnCancel,
+  .modalBtnSend {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,189 @@
+/* Home.css */
+.App {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Hero Wrapper - Contenedor de la imagen de fondo */
+.hero-wrapper {
+  position: relative;
+  background-image: url('../../../assets/neg.jpg'); /* Ajusta esta ruta según tu estructura */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Capa de degradado oscuro (overlay) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* Contenido del hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header transparente */
+.header-transparent {
+  position: relative;
+  z-index: 3;
+  background-color: transparent !important;
+}
+
+/* Estilos para el navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Efecto de desenfoque para elementos */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Espacio para teléfono */
+.phone-space {
+  border-left: 4px solid #0d6efd;
+  transition: all 0.3s ease;
+  max-width: 350px;
+}
+
+.phone-space:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateX(5px);
+}
+
+/* Tarjetas de información */
+.info-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.info-card:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px);
+  border-color: #0d6efd;
+}
+
+/* Feature cards */
+.feature-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: #0d6efd;
+}
+
+/* Stats cards */
+.stats-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Card transparente */
+.bg-white.bg-opacity-95 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Texto con opacidad */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Letter spacing */
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+/* Efecto de hover para los links del navbar */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0 !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* Botones */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Animaciones para íconos */
+.lucide {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .lucide,
+.stats-card:hover .lucide {
+  transform: scale(1.1);
+}
+
+.btn:hover .lucide {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  .phone-space h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-wrapper {
+    background-attachment: scroll;
+  }
+}

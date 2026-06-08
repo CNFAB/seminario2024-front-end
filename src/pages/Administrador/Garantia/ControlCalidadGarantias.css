@@ -1,0 +1,46 @@
+.control-calidad-container {
+  padding: 1.5rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.calidad-card {
+  transition: all 0.3s ease;
+  border-radius: 1rem !important;
+}
+
+.calidad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.calidad-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablas */
+.table th {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  border-bottom-width: 1px;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .control-calidad-container {
+    padding: 1rem;
+  }
+}

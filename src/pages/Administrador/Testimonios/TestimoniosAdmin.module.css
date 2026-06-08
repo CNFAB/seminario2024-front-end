@@ -1,0 +1,380 @@
+/* TestimoniosAdmin.module.css */
+
+/* Contenedor principal */
+.testimoniosContainer {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.testimoniosHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.testimoniosHeader h4 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.testimoniosHeader h4 i {
+  margin-right: 10px;
+  color: #6366f1;
+}
+
+.testimoniosHeader p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.testimoniosBtnRefresh {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  color: #475569;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimoniosBtnRefresh:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Filtros */
+.testimoniosFiltros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.testimoniosFiltroBtn {
+  padding: 8px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: white;
+  color: #475569;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.testimoniosFiltroBtn:hover {
+  background: #f1f5f9;
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.testimoniosFiltroBtn.active {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  border-color: #6366f1;
+  color: white;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+}
+
+/* Grid de tarjetas */
+.testimoniosGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Tarjeta de testimonio */
+.testimonioCard {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.testimonioCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+/* Header de tarjeta */
+.testimonioCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.testimonioClienteInfo {
+  flex: 1;
+}
+
+.testimonioClienteNombre {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.testimonioDispositivo {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.testimonioFecha {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* Badges de estado */
+.testimonioBadge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.testimonioBadgePendiente {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.testimonioBadgeAprobado {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.testimonioBadgeRechazado {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Estrellas */
+.testimonioEstrellas {
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.testimonioEstrellaActiva {
+  color: #f59e0b;
+}
+
+.testimonioEstrellaInactiva {
+  color: #d1d5db;
+}
+
+/* Comentario */
+.testimonioComentarioBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.testimonioComentarioBox p {
+  margin: 0;
+  font-size: 14px;
+  color: #334155;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonioSinComentario {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Botones de acción */
+.testimonioAcciones {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.testimonioBtn {
+  padding: 7px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  color: #475569;
+}
+
+.testimonioBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.testimonioBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.testimonioBtnAprobar {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: #059669;
+  color: white;
+}
+
+.testimonioBtnAprobar:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.testimonioBtnRechazar {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.testimonioBtnRechazar:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.testimonioBtnVolver {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.testimonioBtnVolver:hover:not(:disabled) {
+  background: #fffbeb;
+}
+
+.testimonioBtnEliminar {
+  border-color: #cbd5e1;
+  color: #94a3b8;
+}
+
+.testimonioBtnEliminar:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* Loading */
+.testimoniosLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: #64748b;
+}
+
+.testimoniosSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+/* Estado vacío */
+.testimoniosVacio {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.testimoniosVacio h5 {
+  color: #0f172a;
+  margin: 16px 0 8px;
+}
+
+.testimoniosVacio p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Alert de error */
+.testimoniosAlert {
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Animaciones */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimoniosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimoniosContainer {
+    padding: 16px;
+  }
+
+  .testimoniosHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .testimoniosFiltros {
+    gap: 6px;
+  }
+
+  .testimoniosFiltroBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .testimonioCard {
+    padding: 16px;
+  }
+
+  .testimonioAcciones {
+    flex-wrap: wrap;
+  }
+
+  .testimonioBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

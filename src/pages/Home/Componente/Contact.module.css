@@ -1,0 +1,448 @@
+/* src/pages/Contact/Contact.module.css */
+
+.contactPage {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+/* Hero Section */
+.contactHeroWrapper {
+  position: relative;
+  min-height: 50vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  overflow: hidden;
+}
+
+.contactHeroWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contactHeroContent {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+/* Contact Info Cards */
+.contactInfoCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contactInfoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.contactIcon {
+  display: inline-flex;
+  padding: 15px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  color: white;
+}
+
+.contactInfoCard h5 {
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.contactInfoCard p {
+  color: #e0e0e0;
+}
+
+.contactInfoCard small {
+  color: #a0a0a0;
+}
+
+/* Form Card */
+.contactFormCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contactFormCard h3 {
+  color: #ffffff;
+}
+
+.contactInput {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.contactInput:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.contactInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contactFormCard label {
+  color: #e0e0e0;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.contactSubmitBtn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contactSubmitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+/* Map Card */
+.contactMapCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+
+.contactMapCard h3 {
+  color: #ffffff;
+}
+
+.mapContainer {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contactDetails {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.contactDetails h5 {
+  color: #ffffff;
+}
+
+.contactDetails p {
+  color: #c0c0c0;
+  margin-bottom: 8px;
+}
+
+/* WhatsApp CTA */
+.whatsappCta {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(37, 211, 102, 0.05) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.whatsappCta h4 {
+  color: #ffffff;
+}
+
+.whatsappCta p {
+  color: #c0c0c0;
+}
+
+.whatsappBtn {
+  background: #25d366;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.whatsappBtn:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Redes Sociales */
+.socialSectionContact {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, rgba(10, 10, 20, 0.95) 0%, rgba(20, 20, 35, 0.95) 100%);
+  border-radius: 24px;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.socialSectionContact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+}
+
+.socialHeaderContact {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.socialHeaderContact h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.socialHeaderDecorationContact {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.socialSubtitleContact {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
+}
+
+.socialGridContact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.socialCardContact {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+
+.socialCardContact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.socialCardContact:hover {
+  background: rgba(255, 107, 53, 0.05);
+  border-color: #ff6b35;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.socialCardContact:hover::before {
+  transform: scaleX(1);
+}
+
+.socialIconWrapperContact {
+  margin-bottom: 1.5rem;
+}
+
+.socialIconContact {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 165, 0, 0.2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  transition: all 0.3s ease;
+}
+
+.socialCardContact:hover .socialIconContact {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.4), rgba(255, 165, 0, 0.4));
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+}
+
+.socialIconContact svg {
+  color: #ff6b35;
+  transition: all 0.3s ease;
+}
+
+.socialCardContact:hover .socialIconContact svg {
+  color: #ffa500;
+  transform: scale(1.05);
+}
+
+.socialCardContact h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.socialCardContact p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.socialHoverEffectContact {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 107, 53, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.socialCardContact:hover .socialHoverEffectContact {
+  opacity: 1;
+}
+
+/* Colores específicos para cada red social en hover */
+.socialCardContactFacebook:hover {
+  box-shadow: 0 10px 30px rgba(24, 119, 242, 0.2);
+}
+
+.socialCardContactTwitter:hover {
+  box-shadow: 0 10px 30px rgba(29, 161, 242, 0.2);
+}
+
+.socialCardContactInstagram:hover {
+  box-shadow: 0 10px 30px rgba(193, 53, 132, 0.2);
+}
+
+/* Dirección */
+.addressHighlight {
+  transition: transform 0.2s;
+}
+
+.addressHighlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.transportCard {
+  background: white;
+  border-radius: 10px;
+  transition: all 0.2s;
+  border: 1px solid #e9ecef;
+}
+
+.transportCard:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  border-color: #6366f1;
+}
+
+.naranja {
+  color: #ff6b35;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactHeroContent h1 {
+    font-size: 2rem;
+  }
+
+  .contactHeroContent .lead {
+    font-size: 1rem;
+  }
+
+  .contactInfoCard,
+  .contactFormCard,
+  .contactMapCard {
+    margin-bottom: 1rem;
+  }
+
+  .whatsappCta {
+    margin: 0 1rem;
+  }
+
+  .socialSectionContact {
+    padding: 2rem 1rem;
+  }
+
+  .socialHeaderContact h2 {
+    font-size: 1.5rem;
+  }
+
+  .socialGridContact {
+    gap: 1rem;
+  }
+
+  .socialCardContact {
+    padding: 1.5rem;
+  }
+
+  .socialIconContact {
+    width: 55px;
+    height: 55px;
+  }
+
+  .socialIconContact svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .socialCardContact h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactInfoCard {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .socialGridContact {
+    grid-template-columns: 1fr;
+  }
+}
